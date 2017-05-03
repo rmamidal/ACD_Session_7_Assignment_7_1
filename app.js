@@ -1,8 +1,13 @@
-// Function to return Area of circle.
-function calculateArea(r) {
-  return 3.14 * r * r; // Area of circle formula.
+// Outer function with function parameter.
+function outerFunc(innerFunc){
+  innerFunc(); // Calling parameter function.
 }
 
+// Declar and define inner function.
+var innerFunc = function() {
+  console.log("Hello world from inner function"); // Printing text to console.
+}
 
-console.log("Area of Circle: "+ Math.ceil(calculateArea(7))); // Prints Area of Circle with round off.
-
+outerFunc(innerFunc); // Calling outer function with inner function as parameter.
+ 
+ 
